@@ -3,41 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kayserispor Portal</title>
+    <title>Kayserispor Haber & Skor</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-[#0e1712] text-white pb-20">
+<body class="bg-[#0b140e] text-white pb-24 font-sans">
 
-    <!-- Üst Canlı Skor Bandı -->
-    <div class="bg-[#15231b] p-3 text-center text-xs font-bold border-b border-gray-800 flex justify-between items-center px-4">
-        <span class="text-red-500 font-bold">● CANLI</span>
-        <span>Kayserispor 0 - 0 Rakip</span>
-        <span class="text-gray-400">75'</span>
+    <!-- Üst Skor Bandı -->
+    <div class="bg-[#122217] p-3 text-center text-xs font-bold border-b border-emerald-900/40 flex justify-between items-center px-4 sticky top-0 z-50">
+        <span class="text-red-500 animate-pulse flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span> CANLI
+        </span>
+        <span class="tracking-wide">Kayserispor 7 - 0 Cihangir GSK</span>
+        <span class="text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800/50">MS</span>
     </div>
 
-    <!-- Haber Kartı -->
+    <!-- Ana İçerik -->
     <main class="p-4 max-w-md mx-auto">
-        <span class="text-xs text-yellow-500 font-semibold">Haberler / A Takım</span>
-        <h1 class="text-xl font-bold mt-1 mb-3">Kayserispor Hazırlık Maçında Sahada!</h1>
-        <img src="https://via.placeholder.com/400x220" class="rounded-lg w-full object-cover mb-4" alt="Haber">
-        <p class="text-gray-300 text-sm leading-relaxed">
-            Kayserispor, yeni sezon hazırlıklarını tüm hızıyla sürdürüyor...
+        <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-bold text-yellow-500 uppercase tracking-wider">Haberler</span>
+            <span class="text-xs text-gray-500">/</span>
+            <span class="text-xs text-gray-400">A Takım</span>
+        </div>
+
+        <h1 class="text-2xl font-black text-gray-100 leading-tight mb-3">
+            Kayserispor'dan Farklı Prova: 7-0!
+        </h1>
+
+        <div class="flex items-center gap-2 text-xs text-gray-400 mb-4">
+            <span class="w-6 h-6 rounded-full bg-yellow-600 flex items-center justify-center font-bold text-black">KS</span>
+            <span>Kayserispor Medya</span>
+            <span>•</span>
+            <span>Bugün</span>
+        </div>
+
+        <!-- Gerçek Görsel Entegrasyonu -->
+        <div class="relative overflow-hidden rounded-xl border border-gray-800 shadow-2xl mb-4">
+            <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop" 
+                 class="w-full h-52 object-cover" 
+                 alt="Kayserispor Maç Görseli">
+        </div>
+
+        <p class="text-gray-300 text-sm leading-relaxed bg-[#122217]/50 p-4 rounded-xl border border-emerald-900/30">
+            Kayserispor, yeni sezon hazırlıklarını tüm hızıyla sürdürüyor. Sahadaki etkili oyunuyla dikkat çeken sarı-kırmızılı ekip, hazırlık karşılaşmasında rakibini net bir skorla mağlup etti.
         </p>
     </main>
 
-    <!-- Mobil Alt Menü (Bottom Navigation) -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-[#15231b] border-t border-gray-800 flex justify-around py-2 text-center text-xs text-gray-400">
-        <button class="flex flex-col items-center text-yellow-500">
-            <span>⚽</span><span>Skorlar</span>
+    <!-- Mobil Alt Menü (Gelişmiş İkonlar) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-[#122217]/95 backdrop-blur-md border-t border-emerald-900/50 flex justify-around py-3 text-center text-[10px] font-medium text-gray-400 z-50">
+        <button class="flex flex-col items-center gap-1 text-yellow-500">
+            <i class="fa-solid fa-[#10] text-base"></i>
+            <i class="fa-solid fa-futbol text-base"></i>
+            <span>Skorlar</span>
         </button>
-        <button class="flex flex-col items-center">
-            <span>🏆</span><span>Ligler</span>
+        <button class="flex flex-col items-center gap-1 hover:text-gray-200">
+            <i class="fa-solid fa-trophy text-base"></i>
+            <span>Ligler</span>
         </button>
-        <button class="flex flex-col items-center">
-            <span>📰</span><span>Haberler</span>
+        <button class="flex flex-col items-center gap-1 hover:text-gray-200">
+            <i class="fa-solid fa-newspaper text-base"></i>
+            <span>Haberler</span>
         </button>
-        <button class="flex flex-col items-center">
-            <span>📊</span><span>Puan Durumu</span>
+        <button class="flex flex-col items-center gap-1 hover:text-gray-200">
+            <i class="fa-solid fa-chart-simple text-base"></i>
+            <span>Puan Durumu</span>
         </button>
     </nav>
 
